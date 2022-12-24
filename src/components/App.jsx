@@ -45,7 +45,7 @@ export class App extends Component {
     }
   };
 
-   onBtnClick = () => {
+   onLoadMore = () => {
     this.setState(prevState => ({ page: prevState.page + 1 }));
   };
 
@@ -65,7 +65,7 @@ export class App extends Component {
         {error && <div>{error.message}. Please reload the page</div>}
         {isLoading && <Loader/>}
         <ImageGallery pictures={pictures} onSelectedPicture={this.onSelectedPicture} />
-        {showBtn && <Button onLoadMore={this.onBtnClick} />}
+        {showBtn && <Button onLoadMore={this.onLoadMore} />}
         {selectedPicture !== null && (
           <Modal src={selectedPicture } closeModal ={this.closeModal} />
         )}

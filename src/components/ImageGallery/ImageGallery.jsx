@@ -7,7 +7,7 @@ export const ImageGallery = ({ pictures, onSelectedPicture }) => {
             {pictures.length > 0 && <ul className={css.gallery}>
                 {pictures.map(picture => {
                     return (
-                        <li key={picture.id}>
+                        <li key={picture.id} className={css.item}>
                             <ImageGalleryItem picture={picture} onSelectedPicture={onSelectedPicture} />
                             
                         </li>
